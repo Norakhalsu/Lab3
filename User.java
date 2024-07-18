@@ -75,9 +75,10 @@ public class User {
 
     public void checkout() {
         // Completes the purchase and updates purchased media list and stock
-        for (Media media : this.purcheseMediaList) {
-
-        }
+       // for (Media media : this.purcheseMediaList) {
+        purcheseMediaList.addAll(shoppingCart);
+        shoppingCart.removeAll(purcheseMediaList);
+        
     }
        public void addPurchasedMedia(Media media) {
         if (this.purcheseMediaList == null ){
